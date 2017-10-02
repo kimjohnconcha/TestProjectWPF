@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProjectWPF.Views"
         mc:Ignorable="d"
-        Title="LoginForm" Height="300" Width="300">
-    <Grid>
-        
+        Title="LoginForm" Height="300" Width="360">
+    <Grid HorizontalAlignment="Left" Width="350">
+        <Label Content="Username" HorizontalAlignment="Left" Margin="29,83,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="32,117,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="username_entry"  HorizontalAlignment="Left" Height="23" 
+                 Margin="97,87,0,0" TextWrapping="Wrap" Text="{Binding Path=Username, Mode=TwoWay}" VerticalAlignment="Top" Width="177"/>
+        <TextBox x:Name="password_entry" HorizontalAlignment="Left" Height="23" 
+                 Margin="97,120,0,0" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay}" VerticalAlignment="Top" Width="177"/>
+        <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Left" 
+                Margin="110,171,0,0" VerticalAlignment="Top" Width="75" Click="login_btn_Click"/>
+        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" 
+                Margin="199,171,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>

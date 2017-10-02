@@ -61,6 +61,7 @@
     <Compile Include="Models\StudentClassCard.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ViewModels\InstructorVM.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
     <Compile Include="ViewModels\MainDashBoardVM.cs" />
     <Compile Include="ViewModels\StudentClassCardVM.cs" />
     <Compile Include="ViewModels\StudentVM.cs" />

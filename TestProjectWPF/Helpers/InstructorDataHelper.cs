@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestProjectWPF.Models
+namespace TestProjectWPF.Helpers
 {
-    public class Student : User
+    public class InstructorDataHelper
     {
+
     }
 }
