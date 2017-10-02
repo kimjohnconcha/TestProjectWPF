@@ -13,9 +13,20 @@ namespace TestProjectWPF.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
 
+        public void GotoStudent()
+        {
+            System.Diagnostics.Debug.WriteLine("stud");
+        }
 
+        public void GotoInstructor()
+        {
+            System.Diagnostics.Debug.WriteLine("ins");
+        }
 
-
+        public void GotoStudentClassCard()
+        {
+            System.Diagnostics.Debug.WriteLine("card");
+        }
 
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)

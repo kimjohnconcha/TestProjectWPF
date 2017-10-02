@@ -25,7 +25,20 @@ namespace TestProjectWPF
         {
             InitializeComponent();
             this.DataContext = new MainDashBoardVM();
+        }
 
+        private void stud_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ins_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sc_button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
