@@ -55,7 +55,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Data\AppTestData.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentClassCard.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="ViewModels\InstructorVM.cs" />
+    <Compile Include="ViewModels\MainDashBoardVM.cs" />
+    <Compile Include="ViewModels\StudentClassCardVM.cs" />
+    <Compile Include="ViewModels\StudentVM.cs" />
+    <Compile Include="Views\InstructorWindow.xaml.cs">
+      <DependentUpon>InstructorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentClassCardWindow.xaml.cs">
+      <DependentUpon>StudentClassCardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentWindow.xaml.cs">
+      <DependentUpon>StudentWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\InstructorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainDashborad.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,10 +91,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\MainDashborad.xaml.cs">
+      <DependentUpon>MainDashborad.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\LoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentClassCardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,6 +139,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,5 +13,6 @@ namespace TestProjectWPF
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
