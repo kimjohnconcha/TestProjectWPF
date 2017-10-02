@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestProjectWPF.Data;
 
 namespace TestProjectWPF.Models
 {
-    class StudentClassCard
+    public class StudentClassCard : Record
     {
+        public int ID { get; set; }
+        public Student student { get; set; }
+        public Instructor instructor { get; set; }
+        public string Status { get; set; }
+
+        public override void ShowDetails()
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

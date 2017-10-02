@@ -34,6 +34,9 @@ namespace TestProjectWPF.ViewModels
             System.Diagnostics.Debug.WriteLine("Login method");
             System.Diagnostics.Debug.WriteLine("username " + Username);
             System.Diagnostics.Debug.WriteLine("password " + Password);
+
+            var maindashboard = new MainDashboardForm();
+            maindashboard.Show();
         }
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)

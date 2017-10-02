@@ -55,7 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\AppGlobalVariable.cs" />
     <Compile Include="Data\AppTestData.cs" />
+    <Compile Include="Data\IDataService.cs" />
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="Data\DataManager.cs" />
+    <Compile Include="Data\Record.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentClassCard.cs" />
@@ -84,7 +89,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MainDashborad.xaml">
+    <Page Include="Views\MainDashboardForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -92,8 +97,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\MainDashborad.xaml.cs">
-      <DependentUpon>MainDashborad.xaml</DependentUpon>
+    <Compile Include="Views\MainDashboardForm.xaml.cs">
+      <DependentUpon>MainDashboardForm.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\LoginForm.xaml">

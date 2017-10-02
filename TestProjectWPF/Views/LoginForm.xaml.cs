@@ -31,6 +31,7 @@ namespace TestProjectWPF.Views
         private void login_btn_Click(object sender, RoutedEventArgs e)
         {
             loginvm.Login();
+            this.Close();
         }
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TestProjectWPF.Models
 {
-    class Instructor
+    public class Instructor : User
     {
+        public string FacultyID { get; set; }
+        public string Deparment { get; set; }
+        public string Subject { get; set; }
     }
 }

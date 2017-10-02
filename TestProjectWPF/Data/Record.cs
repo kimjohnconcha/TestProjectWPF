@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestProjectWPF.Helpers
+namespace TestProjectWPF.Data
 {
-    public class StudentClassCardHelper
+    public abstract class Record
     {
-
+        public abstract void ShowDetails();
     }
 }

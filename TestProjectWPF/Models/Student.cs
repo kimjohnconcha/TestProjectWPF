@@ -8,5 +8,8 @@ namespace TestProjectWPF.Models
 {
     public class Student : User
     {
+        public string StudentCode { get; set; }
+        public string course { get; set; }
+        public string Room { get; set; }
     }
 }
