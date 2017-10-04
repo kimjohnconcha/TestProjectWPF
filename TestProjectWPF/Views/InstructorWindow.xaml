@@ -6,8 +6,22 @@
         xmlns:local="clr-namespace:TestProjectWPF.Views"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Instructor" Height="400" Width="550">
-    <Grid>
-        
+        Title="Instructor" Height="400" Width="560">
+    <Grid HorizontalAlignment="Left" Width="544">
+        <DataGrid x:Name="insDataGrid" HorizontalAlignment="Left" Margin="10,56,0,0" 
+                  VerticalAlignment="Top" Height="215" Width="524" Grid.RowSpan="2"
+                  AutoGenerateColumns="False" ItemsSource="{Binding InsList}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="25"/>
+                <DataGridTextColumn Header="Firstname" Binding="{Binding Firstname}" Width="*"/>
+                <DataGridTextColumn Header="Lastname" Binding="{Binding Lastname}" Width="*"/>
+                <DataGridTextColumn Header="Faculty ID" Binding="{Binding FacultyID}" Width="*"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}" Width="*"/>
+                <DataGridTextColumn Header="Subject" Binding="{Binding Subject}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Width="97" Height="35" Click="delete_btn_Click"/>
+        <Button x:Name="add_btn" Content="Add" HorizontalAlignment="Left" Margin="437,315,0,0" VerticalAlignment="Top" Width="97" Height="35" Click="add_btn_Click"/>
+        <Button x:Name="cancel_btn" Content="Cancel" HorizontalAlignment="Left" Margin="322,315,0,0" VerticalAlignment="Top" Width="97" Height="35" Click="cancel_btn_Click"/>
     </Grid>
 </Window>

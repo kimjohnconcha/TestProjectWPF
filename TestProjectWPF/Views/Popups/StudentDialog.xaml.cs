@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using TestProjectWPF.Data;
+using TestProjectWPF.Models;
 
 namespace TestProjectWPF.Views.Popups
 {
@@ -31,7 +22,34 @@ namespace TestProjectWPF.Views.Popups
 
         private void sacebtn_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                foreach (var item in StudentDataItems.Instance.StudentList)
+                {
+                    if (item.ID == Convert.ToInt32(studid.Text))
+                    {
+                        MessageBox.Show("Student ID already exist!", "Save Error!");
+                    }
+                }
 
+                // add new student
+                StudentDataItems.Instance.StudentList.Add(new Student()
+                {
+                    ID = Convert.ToInt32(studid.Text),
+                    Firstname = studfname.Text,
+                    Lastname = studlname.Text,
+                    StudentCode = studcode.Text,
+                    course = studcourse.Text,
+                    Room = studroom.Text
+                });
+
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error saving student: " + ex.Message);
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -76,6 +76,9 @@
     <Compile Include="Views\LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Popups\InstructorDialog.xaml.cs">
+      <DependentUpon>InstructorDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Popups\StudentDialog.xaml.cs">
       <DependentUpon>StudentDialog.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
     <Page Include="Views\LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Popups\InstructorDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Popups\StudentDialog.xaml">
       <SubType>Designer</SubType>

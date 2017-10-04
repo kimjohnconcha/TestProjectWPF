@@ -26,7 +26,7 @@ namespace TestProjectWPF.ViewModels
 
         public StudentVM()
         {
-
+            StudList = StudentDataItems.Instance.StudentList;
         }
 
         public void OnAdd()
@@ -36,14 +36,9 @@ namespace TestProjectWPF.ViewModels
             studDialog.Topmost = true;
         }
 
-        public void OnDelete()
+        public void OnDelete(int std_index)
         {
-
-        }
-
-        public void OnCancel()
-        {
-
+            StudentDataItems.Instance.StudentList.RemoveAt(std_index);
         }
 
 

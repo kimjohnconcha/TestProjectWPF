@@ -30,7 +30,13 @@ namespace TestProjectWPF.Views
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            studVM.OnDelete();
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this record?", 
+                "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                var student = studDataGrid.SelectedIndex;
+                studVM.OnDelete(student);
+            }
         }
 
         private void cancel_btn_Click(object sender, RoutedEventArgs e)
@@ -42,7 +48,6 @@ namespace TestProjectWPF.Views
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
             studVM.OnAdd();
-            //this.Topmost = false;
         }
     }
 }
