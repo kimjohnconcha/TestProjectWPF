@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProjectWPF.Views"
         mc:Ignorable="d"
-        Title="InstructorWindow" Height="300" Width="300">
+        ResizeMode="NoResize"
+        Title="Instructor" Height="400" Width="550">
     <Grid>
         
     </Grid>

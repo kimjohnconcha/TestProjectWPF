@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProjectWPF.Views"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="LoginForm" Height="300" Width="360">
     <Grid HorizontalAlignment="Left" Width="350">
         <Label Content="Username" HorizontalAlignment="Left" Margin="29,83,0,0" VerticalAlignment="Top"/>

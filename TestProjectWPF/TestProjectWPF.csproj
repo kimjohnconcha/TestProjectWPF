@@ -60,7 +60,7 @@
     <Compile Include="Data\IDataService.cs" />
     <Compile Include="Data\DataHelper.cs" />
     <Compile Include="Data\DataManager.cs" />
-    <Compile Include="Data\Record.cs" />
+    <Compile Include="Data\Card.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentClassCard.cs" />
@@ -76,8 +76,8 @@
     <Compile Include="Views\LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SettingsWindow.xaml.cs">
-      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    <Compile Include="Views\Popups\StudentDialog.xaml.cs">
+      <DependentUpon>StudentDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StudentClassCardWindow.xaml.cs">
       <DependentUpon>StudentClassCardWindow.xaml</DependentUpon>
@@ -105,7 +105,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SettingsWindow.xaml">
+    <Page Include="Views\Popups\StudentDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

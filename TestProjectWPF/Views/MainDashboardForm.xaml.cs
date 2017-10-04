@@ -21,25 +21,28 @@ namespace TestProjectWPF
     /// </summary>
     public partial class MainDashboardForm : Window
     {
+        MainDashBoardVM maindashVM = new MainDashBoardVM();
+
         public MainDashboardForm()
         {
             InitializeComponent();
-            this.DataContext = new MainDashBoardVM();
+            
+            this.DataContext = maindashVM;
         }
 
         private void stud_button_Click(object sender, RoutedEventArgs e)
         {
-
+            maindashVM.GotoStudent();
         }
 
         private void ins_button_Click(object sender, RoutedEventArgs e)
         {
-
+            maindashVM.GotoInstructor();
         }
 
         private void sc_button_Click(object sender, RoutedEventArgs e)
         {
-
+            maindashVM.GotoStudentClassCard();
         }
     }
 }

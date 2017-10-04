@@ -24,6 +24,7 @@ namespace TestProjectWPF
             StudentDataItems.Instance.StudentList = new ObservableCollection<Student>();
             InstructorDataItems.Instance.InstructorList = new ObservableCollection<Instructor>();
             StudentClassCardDataItems.Instance.StudentClassCardList = new ObservableCollection<StudentClassCard>();
+            SetInitialData();
             datamanager = new DataManager(new DataHelper());
         }
 
@@ -31,6 +32,13 @@ namespace TestProjectWPF
         {
             base.OnStartup(e);
             System.Diagnostics.Debug.WriteLine("Welcome!!");
+        }
+
+        private void SetInitialData()
+        {
+            AppTestData.SetStudentData();
+            AppTestData.SetInstructorData();
+            AppTestData.SetStudentClassCardData();
         }
     }
 }

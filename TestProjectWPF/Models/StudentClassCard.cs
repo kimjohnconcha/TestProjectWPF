@@ -7,7 +7,7 @@ using TestProjectWPF.Data;
 
 namespace TestProjectWPF.Models
 {
-    public class StudentClassCard : Record
+    public class StudentClassCard : Card
     {
         public int ID { get; set; }
         public Student student { get; set; }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestProjectWPF.ViewModels;
 
 namespace TestProjectWPF.Views
 {
@@ -19,9 +20,29 @@ namespace TestProjectWPF.Views
     /// </summary>
     public partial class StudentWindow : Window
     {
+        StudentVM studVM = new StudentVM();
+
         public StudentWindow()
         {
             InitializeComponent();
+            this.DataContext = studVM;
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            studVM.OnDelete();
+        }
+
+        private void cancel_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            this.Topmost = false;
+        }
+
+        private void add_btn_Click(object sender, RoutedEventArgs e)
+        {
+            studVM.OnAdd();
+            //this.Topmost = false;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestProjectWPF.Data
 {
-    public abstract class Record
+    public abstract class Card
     {
         public abstract void ShowDetails();
     }

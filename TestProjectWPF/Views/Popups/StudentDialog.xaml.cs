@@ -12,16 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TestProjectWPF.Views
+namespace TestProjectWPF.Views.Popups
 {
     /// <summary>
-    /// Interaction logic for SettingsWindow.xaml
+    /// Interaction logic for StudentDialog.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class StudentDialog : Window
     {
-        public SettingsWindow()
+        public StudentDialog()
         {
             InitializeComponent();
+        }
+
+        private void cabcelbtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void sacebtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

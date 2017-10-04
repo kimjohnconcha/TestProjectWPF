@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using TestProjectWPF.Views;
 
 namespace TestProjectWPF.ViewModels
 {
@@ -15,17 +16,23 @@ namespace TestProjectWPF.ViewModels
 
         public void GotoStudent()
         {
-            System.Diagnostics.Debug.WriteLine("stud");
+            var studWin = new StudentWindow();
+            studWin.Show();
+            studWin.Topmost = true;
         }
 
         public void GotoInstructor()
         {
-            System.Diagnostics.Debug.WriteLine("ins");
+            var insWin = new InstructorWindow();
+            insWin.Show();
+            insWin.Topmost = true;
         }
 
         public void GotoStudentClassCard()
         {
-            System.Diagnostics.Debug.WriteLine("card");
+            var sclassWin = new StudentClassCardWindow();
+            sclassWin.Show();
+            sclassWin.Topmost = true;
         }
 
 

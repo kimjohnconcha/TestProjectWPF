@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestProjectWPF.Models;
+﻿using TestProjectWPF.Models;
 
 namespace TestProjectWPF.Data
 {
@@ -16,12 +11,22 @@ namespace TestProjectWPF.Data
         {
             StudentDataItems.Instance.StudentList.Add(new Student()
             {
-
+                ID = 56,
+                Firstname = "Monkey",
+                Lastname = "King",
+                StudentCode = "STUD10",
+                course = "Tactician",
+                Room = "31B"
             });
 
             StudentDataItems.Instance.StudentList.Add(new Student()
             {
-
+                ID = 72,
+                Firstname = "Makoto",
+                Lastname = "Shishio",
+                StudentCode = "STUD90",
+                course = "Slasher 101",
+                Room = "01K"
             });
         }
 
@@ -32,12 +37,22 @@ namespace TestProjectWPF.Data
         {
             InstructorDataItems.Instance.InstructorList.Add(new Instructor()
             {
-
+                ID = 12,
+                Firstname = "Light",
+                Lastname = "Yagami",
+                FacultyID = "INS672",
+                Deparment = "Nursing",
+                Subject = "Basic Assasination"
             });
 
             InstructorDataItems.Instance.InstructorList.Add(new Instructor()
             {
-
+                ID = 14,
+                Firstname = "Ben",
+                Lastname = "Hur",
+                FacultyID = "INS001",
+                Deparment = "Engineering",
+                Subject = "Building Blocks"
             });
         }
 
@@ -48,12 +63,50 @@ namespace TestProjectWPF.Data
         {
             StudentClassCardDataItems.Instance.StudentClassCardList.Add(new StudentClassCard()
             {
-
+                ID = 12,
+                student = new Student()
+                {
+                    ID = 72,
+                    Firstname = "Makoto",
+                    Lastname = "Shishio",
+                    StudentCode = "STUD90",
+                    course = "Slasher 101",
+                    Room = "01K"
+                },
+                instructor = new Instructor()
+                {
+                    ID = 14,
+                    Firstname = "Ben",
+                    Lastname = "Hur",
+                    FacultyID = "INS001",
+                    Deparment = "Engineering",
+                    Subject = "Building Blocks"
+                },
+                Status = "Failed!"
             });
 
             StudentClassCardDataItems.Instance.StudentClassCardList.Add(new StudentClassCard()
             {
-
+                ID = 10,
+                student = new Student()
+                {
+                    ID = 56,
+                    Firstname = "Monkey",
+                    Lastname = "King",
+                    StudentCode = "STUD10",
+                    course = "Tactician",
+                    Room = "31B"
+                },
+                instructor = new Instructor()
+                {
+                    ID = 12,
+                    Firstname = "Light",
+                    Lastname = "Yagami",
+                    FacultyID = "INS672",
+                    Deparment = "Nursing",
+                    Subject = "Basic Assasination"
+                },
+                Status = "Well Done!"
             });
         }
     }
