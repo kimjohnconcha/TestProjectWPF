@@ -8,6 +8,6 @@ namespace TestProjectWPF.Data
 {
     public abstract class Card
     {
-        public abstract void ShowDetails();
+        public abstract string ShowDetails();
     }
 }

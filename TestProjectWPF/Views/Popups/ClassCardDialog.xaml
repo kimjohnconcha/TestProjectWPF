@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Class Card" Height="300" Width="300">
     <Grid>
-        
+        <ComboBox x:Name="student" HorizontalAlignment="Left" Margin="94,73,0,0" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

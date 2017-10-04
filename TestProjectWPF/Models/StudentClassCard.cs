@@ -14,9 +14,11 @@ namespace TestProjectWPF.Models
         public Instructor instructor { get; set; }
         public string Status { get; set; }
 
-        public override void ShowDetails()
+        public override string ShowDetails()
         {
             //throw new NotImplementedException();
+
+            return "";
         }
     }
 }

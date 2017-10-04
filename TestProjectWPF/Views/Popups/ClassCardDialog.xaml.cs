@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestProjectWPF.Data;
 
 namespace TestProjectWPF.Views.Popups
 {
@@ -22,6 +23,8 @@ namespace TestProjectWPF.Views.Popups
         public ClassCardDialog()
         {
             InitializeComponent();
+
+            student.ItemsSource = StudentDataItems.Instance.StudentList;
         }
     }
 }
