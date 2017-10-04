@@ -11,5 +11,10 @@ namespace TestProjectWPF.Models
         public string FacultyID { get; set; }
         public string Deparment { get; set; }
         public string Subject { get; set; }
+
+        public override string ToString()
+        {
+            return ID + " - " + Firstname + " " + Lastname;
+        }
     }
 }

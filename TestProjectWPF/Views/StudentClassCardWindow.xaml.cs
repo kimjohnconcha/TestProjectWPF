@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using TestProjectWPF.ViewModels;
 
 namespace TestProjectWPF.Views
 {
@@ -19,9 +8,34 @@ namespace TestProjectWPF.Views
     /// </summary>
     public partial class StudentClassCardWindow : Window
     {
+        StudentClassCardVM ccVM = new StudentClassCardVM();
+
         public StudentClassCardWindow()
         {
             InitializeComponent();
+            this.DataContext = ccVM;
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this record?", 
+                "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                var cc = studDataGrid.SelectedIndex;
+                ccVM.OnDelete(cc);
+            }
+        }
+
+        private void cancel_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            this.Topmost = false;
+        }
+
+        private void add_btn_Click(object sender, RoutedEventArgs e)
+        {
+            ccVM.OnAdd();
         }
     }
 }

@@ -30,9 +30,9 @@ namespace TestProjectWPF.ViewModels
 
         public void OnAdd()
         {
-            var studDialog = new InstructorDialog();
-            studDialog.Show();
-            studDialog.Topmost = true;
+            var insDialog = new InstructorDialog();
+            insDialog.Show();
+            insDialog.Topmost = true;
         }
 
         public void OnDelete(int ins_index)
