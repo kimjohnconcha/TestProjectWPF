@@ -24,6 +24,7 @@ namespace TestProjectWPF.Views.Popups
         {
             try
             {
+                // Check if ID already exist
                 foreach (var item in StudentDataItems.Instance.StudentList)
                 {
                     if (item.ID == Convert.ToInt32(studid.Text))

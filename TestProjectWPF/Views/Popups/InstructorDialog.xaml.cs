@@ -24,6 +24,7 @@ namespace TestProjectWPF.Views.Popups
         {
             try
             {
+                // Check if ID already exist
                 foreach (var item in InstructorDataItems.Instance.InstructorList)
                 {
                     if (item.ID == Convert.ToInt32(insid.Text))
@@ -42,18 +43,7 @@ namespace TestProjectWPF.Views.Popups
                     Subject = inssubject.Text
                 };
 
-                
-
-                // add new Instructor
-                InstructorDataItems.Instance.InstructorList.Add(new Instructor()
-                {
-                    ID = Convert.ToInt32(insid.Text),
-                    Firstname = insfname.Text,
-                    Lastname = inslname.Text,
-                    FacultyID = insfacid.Text,
-                    Deparment = insdepartment.Text,
-                    Subject = inssubject.Text
-                });
+                App.Datamanager.SaveInstructor(instructor);
 
                 this.Close();
             }

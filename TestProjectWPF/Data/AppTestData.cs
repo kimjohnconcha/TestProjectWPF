@@ -9,8 +9,8 @@ namespace TestProjectWPF.Data
         /// </summary>
         public static void SetStudentData()
         {
-            App.Datamanager.SaveStudentData(56, "Monkey", "King", "STUD10", "Tactician 101", "31B");
-            App.Datamanager.SaveStudentData(56, "Makoto", "Shishio", "STUD90", "Slasher 102", "21B");
+            App.Datamanager.SaveStudentData(43, "Monkey", "King", "STUD10", "Tactician 101", "31B");
+            App.Datamanager.SaveStudentData(19, "Makoto", "Shishio", "STUD90", "Slasher 102", "21B");
         }
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace TestProjectWPF.Data
         public static void SetInstructorData()
         {
             App.Datamanager.SaveInstructor(12, "Light", "Yagame", "INS654", "Nursing", "Basic Assasination");
-            App.Datamanager.SaveInstructor(12, "Ben", "Hur", "INS001", "Engineering", "Building Blocks");
+            App.Datamanager.SaveInstructor(27, "Ben", "Hur", "INS001", "Engineering", "Building Blocks");
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace TestProjectWPF.Data
 
 
             App.Datamanager.SaveClassCard(
-                12, 
+                15, 
                 new Student()
                 {
                     ID = 72,

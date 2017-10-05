@@ -12,7 +12,7 @@ namespace TestProjectWPF.Helpers
         /// <param name="classCard"></param>
         public void SaveClassCard(StudentClassCard classCard)
         {
-            //throw new NotImplementedException();
+            StudentClassCardDataItems.Instance.StudentClassCardList.Add(classCard);
         }
 
         /// <summary>
@@ -24,7 +24,13 @@ namespace TestProjectWPF.Helpers
         /// <param name="status"></param>
         public void SaveClassCard(int id, Student stud, Instructor instructor, string status)
         {
-            //throw new NotImplementedException();
+            StudentClassCardDataItems.Instance.StudentClassCardList.Add(new StudentClassCard()
+            {
+                ID = id,
+                student = stud,
+                instructor = instructor,
+                Status = status
+            });
         }
 
         /// <summary>
@@ -33,7 +39,7 @@ namespace TestProjectWPF.Helpers
         /// <param name="instructor"></param>
         public void SaveInstructor(Instructor instructor)
         {
-            //throw new NotImplementedException();
+            InstructorDataItems.Instance.InstructorList.Add(instructor);
         }
 
         /// <summary>
@@ -47,7 +53,15 @@ namespace TestProjectWPF.Helpers
         /// <param name="subject"></param>
         public void SaveInstructor(int id, string fname, string lname, string facultyID, string department, string subject)
         {
-            //throw new NotImplementedException();
+            InstructorDataItems.Instance.InstructorList.Add(new Instructor()
+            {
+                ID = id,
+                Firstname = fname,
+                Lastname = lname,
+                FacultyID = facultyID,
+                Deparment = department,
+                Subject = subject
+            });
         }
 
 

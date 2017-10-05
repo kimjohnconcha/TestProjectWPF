@@ -10,7 +10,8 @@
     <Grid HorizontalAlignment="Left" Width="544">
         <DataGrid x:Name="studDataGrid" HorizontalAlignment="Left" Margin="10,56,0,0" 
                   VerticalAlignment="Top" Height="215" Width="524" Grid.RowSpan="2"
-                  AutoGenerateColumns="False" ItemsSource="{Binding CCList}" >
+                  AutoGenerateColumns="False" ItemsSource="{Binding CCList}" 
+                  CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="25"/>
                 <DataGridTextColumn Header="Student" Binding="{Binding student}" Width="*"/>
