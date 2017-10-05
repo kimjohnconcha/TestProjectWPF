@@ -17,15 +17,15 @@ namespace TestProjectWPF
     /// </summary>
     public partial class App : Application
     {
-        public static DataManager datamanager { get; private set; }
+        public static DataManager Datamanager { get; private set; }
 
         public App()
         {
             StudentDataItems.Instance.StudentList = new ObservableCollection<Student>();
             InstructorDataItems.Instance.InstructorList = new ObservableCollection<Instructor>();
             StudentClassCardDataItems.Instance.StudentClassCardList = new ObservableCollection<StudentClassCard>();
+            Datamanager = new DataManager(new DataHelper());
             SetInitialData();
-            datamanager = new DataManager(new DataHelper());
         }
 
         protected override void OnStartup(StartupEventArgs e)

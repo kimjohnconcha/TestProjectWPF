@@ -32,6 +32,18 @@ namespace TestProjectWPF.Views.Popups
                     }
                 }
 
+                var instructor = new Instructor()
+                {
+                    ID = Convert.ToInt32(insid.Text),
+                    Firstname = insfname.Text,
+                    Lastname = inslname.Text,
+                    FacultyID = insfacid.Text,
+                    Deparment = insdepartment.Text,
+                    Subject = inssubject.Text
+                };
+
+                
+
                 // add new Instructor
                 InstructorDataItems.Instance.InstructorList.Add(new Instructor()
                 {

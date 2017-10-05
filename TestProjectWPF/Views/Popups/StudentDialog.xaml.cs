@@ -33,7 +33,8 @@ namespace TestProjectWPF.Views.Popups
                 }
 
                 // add new student
-                StudentDataItems.Instance.StudentList.Add(new Student()
+
+                var student = new Student()
                 {
                     ID = Convert.ToInt32(studid.Text),
                     Firstname = studfname.Text,
@@ -41,7 +42,9 @@ namespace TestProjectWPF.Views.Popups
                     StudentCode = studcode.Text,
                     course = studcourse.Text,
                     Room = studroom.Text
-                });
+                };
+
+                App.Datamanager.SaveStudentData(student);
 
                 this.Close();
             }

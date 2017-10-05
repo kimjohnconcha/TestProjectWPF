@@ -7,7 +7,16 @@
         mc:Ignorable="d"
         Title="Class Card" Height="300" Width="300">
     <Grid>
-        <ComboBox x:Name="student" HorizontalAlignment="Left" Margin="94,73,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="student" HorizontalAlignment="Left" Margin="112,88,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="33,38,0,0" VerticalAlignment="Top"/>
+        <Label Content="Student" HorizontalAlignment="Left" Margin="33,84,0,0" VerticalAlignment="Top"/>
+        <Label Content="Faculty" HorizontalAlignment="Left" Margin="33,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Status" HorizontalAlignment="Left" Margin="33,169,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="faculty" HorizontalAlignment="Left" Margin="112,129,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="status" HorizontalAlignment="Left" Height="23" Margin="112,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Height="23" Margin="112,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" Margin="81,226,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" Margin="182,226,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

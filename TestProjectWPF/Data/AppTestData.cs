@@ -9,25 +9,8 @@ namespace TestProjectWPF.Data
         /// </summary>
         public static void SetStudentData()
         {
-            StudentDataItems.Instance.StudentList.Add(new Student()
-            {
-                ID = 56,
-                Firstname = "Monkey",
-                Lastname = "King",
-                StudentCode = "STUD10",
-                course = "Tactician",
-                Room = "31B"
-            });
-
-            StudentDataItems.Instance.StudentList.Add(new Student()
-            {
-                ID = 72,
-                Firstname = "Makoto",
-                Lastname = "Shishio",
-                StudentCode = "STUD90",
-                course = "Slasher 101",
-                Room = "01K"
-            });
+            App.Datamanager.SaveStudentData(56, "Monkey", "King", "STUD10", "Tactician 101", "31B");
+            App.Datamanager.SaveStudentData(56, "Makoto", "Shishio", "STUD90", "Slasher 102", "21B");
         }
 
         /// <summary>
@@ -35,25 +18,8 @@ namespace TestProjectWPF.Data
         /// </summary>
         public static void SetInstructorData()
         {
-            InstructorDataItems.Instance.InstructorList.Add(new Instructor()
-            {
-                ID = 12,
-                Firstname = "Light",
-                Lastname = "Yagami",
-                FacultyID = "INS672",
-                Deparment = "Nursing",
-                Subject = "Basic Assasination"
-            });
-
-            InstructorDataItems.Instance.InstructorList.Add(new Instructor()
-            {
-                ID = 14,
-                Firstname = "Ben",
-                Lastname = "Hur",
-                FacultyID = "INS001",
-                Deparment = "Engineering",
-                Subject = "Building Blocks"
-            });
+            App.Datamanager.SaveInstructor(12, "Light", "Yagame", "INS654", "Nursing", "Basic Assasination");
+            App.Datamanager.SaveInstructor(12, "Ben", "Hur", "INS001", "Engineering", "Building Blocks");
         }
 
         /// <summary>
@@ -61,10 +27,11 @@ namespace TestProjectWPF.Data
         /// </summary>
         public static void SetStudentClassCardData()
         {
-            StudentClassCardDataItems.Instance.StudentClassCardList.Add(new StudentClassCard()
-            {
-                ID = 12,
-                student = new Student()
+
+
+            App.Datamanager.SaveClassCard(
+                12, 
+                new Student()
                 {
                     ID = 72,
                     Firstname = "Makoto",
@@ -73,7 +40,7 @@ namespace TestProjectWPF.Data
                     course = "Slasher 101",
                     Room = "01K"
                 },
-                instructor = new Instructor()
+                new Instructor()
                 {
                     ID = 14,
                     Firstname = "Ben",
@@ -81,9 +48,9 @@ namespace TestProjectWPF.Data
                     FacultyID = "INS001",
                     Deparment = "Engineering",
                     Subject = "Building Blocks"
-                },
-                Status = "Failed!"
-            });
+                }, 
+                "Falied"
+                );
 
             StudentClassCardDataItems.Instance.StudentClassCardList.Add(new StudentClassCard()
             {
